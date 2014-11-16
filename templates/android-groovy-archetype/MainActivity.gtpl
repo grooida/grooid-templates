@@ -1,4 +1,4 @@
-package com.example.mario.myapplication;
+package ${group}
 
 import android.app.Activity;
 import android.os.Bundle;
