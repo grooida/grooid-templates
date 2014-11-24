@@ -15,12 +15,12 @@ apply plugin: 'me.champeau.gradle.groovy-android'
 
 android {
 
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion ${targetSdkVersion}
+    buildToolsVersion "${buildToolsVersion}"
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 19
+        minSdkVersion ${minSdkVersion}
+        targetSdkVersion ${targetSdkVersion}
         versionCode 1
         versionName "1.0"
     }
@@ -46,7 +46,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:support-v4:${buildToolsVersion}'
     compile 'org.codehaus.groovy:groovy:2.4.0-beta-3:grooid'
     compile ('org.codehaus.groovy:groovy-json:2.4.0-beta-1') {
         transitive = false
