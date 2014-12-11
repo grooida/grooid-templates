@@ -45,12 +45,20 @@ repositories {
 }
 
 dependencies {
+
+    // Android tools
     compile 'com.android.support:support-v4:${buildToolsVersion}'
+    // Groovy version
     compile 'org.codehaus.groovy:groovy:2.4.0-beta-3:grooid'
+    // Groovy Json handling
     compile ('org.codehaus.groovy:groovy-json:2.4.0-beta-1') {
         transitive = false
     }
 
+    // Rest handling
+    compile 'com.squareup.retrofit:retrofit:1.7.1'
+    // Getting rid of boiler plate code
     compile 'com.arasthel:swissknife:1.1.4'
+    // Imaging
     compile 'com.squareup.picasso:picasso:2.3.2'
 }
