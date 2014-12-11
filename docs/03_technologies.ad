@@ -1,0 +1,8 @@
+== Technologies included
+
+The project you've just created has some useful technologies in order not to
+start from nothing.
+
+* *Swissknife* (https://github.com/Arasthel/SwissKnife) : A multi-purpose library containing view injection and threading for Android using annotations
+* *Retrofit* (http://square.github.io/retrofit/) : A type-safe REST client for Android and Java
+* *Picasso* (http://square.github.io/picasso/) : A powerful image downloading and caching library for Android

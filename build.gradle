@@ -1,16 +1,16 @@
 buildscript {
     repositories {
-        maven {
-            url "http://dl.bintray.com/pledbrook/plugins"
-        }
+        maven { url "http://dl.bintray.com/pledbrook/plugins" }
+        maven { url "http://dl.bintray.com/aalmiray/asciidoctor" }
     }
-
     dependencies {
         classpath "uk.co.cacoethes:lazybones-gradle:1.2.1"
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.0'
     }
 }
 
 apply plugin: "uk.co.cacoethes.lazybones-templates"
+apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 
 lazybones {
     repositoryName = "<account>/<templates-repo>"
@@ -25,4 +25,16 @@ lazybones {
     // and `project.bintrayApiKey` respectively.
     repositoryUsername = "your_bintray_username"
     repositoryApiKey = "your_bintray_api_key"
+}
+
+asciidoctor {
+    sourceDir = 'docs' as File
+    options = [
+        attributes: [
+            'icons': 'font',
+            'source-highlighter': 'prettify',
+            'toc': 'left',
+            'toclevels': 4
+        ]
+    ]
 }

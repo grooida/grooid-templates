@@ -1,0 +1,12 @@
+= Android Groovy Templates
+Mario Garcia
+:numbered:
+:stem:
+
+include::00_intro.ad[]
+
+include::01_install.ad[]
+
+include::02_project.ad[]
+
+include::03_technologies.ad[]
