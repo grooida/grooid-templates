@@ -1,4 +1,3 @@
-
 buildscript {
     repositories {
         jcenter()
@@ -55,4 +54,3 @@ dependencies {
     compile 'com.arasthel:swissknife:1.1.4'
     compile 'com.squareup.picasso:picasso:2.3.2'
 }
-

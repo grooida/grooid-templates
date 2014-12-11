@@ -1,4 +1,3 @@
-
 import static org.apache.commons.io.FilenameUtils.concat
 import org.apache.commons.io.FileUtils
 
@@ -15,8 +14,8 @@ props.defaultPackage =
     "org.company.example",
     "defaultPackage")
 props.minSdkVersion =
-    ask("Which is the minimum version of sdk you want to target ? [19.0.0]: ",
-    "19.0.0",
+    ask("Which is the minimum version of sdk you want to target ? [19]: ",
+    "19",
     "minSdkVersion")
 props.targetSdkVersion =
     ask("Which is the main version of SDK you are targeting ? [21]: ",
