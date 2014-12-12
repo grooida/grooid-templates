@@ -13,6 +13,7 @@ apply plugin: "uk.co.cacoethes.lazybones-templates"
 apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 
 lazybones {
+    licenses = ["Apache-2.0"]
     repositoryName = "marioggar/grooid-templates"
 
     repositoryUsername = bintrayUser
