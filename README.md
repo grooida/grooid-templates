@@ -1,6 +1,4 @@
-Lazybones Android template
----------------------------
+Grooid templates
+----------------
 
-How to get started ?
-
-Please read the documentation here
+Please read the documentation [here](http://mariogarcia.github.io/grooid-templates/)
