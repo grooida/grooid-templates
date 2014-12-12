@@ -9,6 +9,3 @@ Available templates in mariogarcia/grooid-templates:
 
 mariogarcia/grooid-new-project
 ----
-
-Notice that template names follow a naming convention identifying the main UI toolkit and main programming language. Alright, let’s create a simple project using Swing as main UI toolkit and Groovy as main language
-
