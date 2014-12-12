@@ -5,7 +5,7 @@ We’re now ready to create the project. You can list all available templates wi
 [source, shell]
 ----
 $ lazybones list
-Available templates in mariogarcia/grooid-templates:
+Available templates in marioggar/grooid-templates:
 
-mariogarcia/grooid-new-project
+marioggar/grooid-new-project
 ----

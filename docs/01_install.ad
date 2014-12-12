@@ -19,7 +19,7 @@ Next, add the Android Lazybones templates repository to your Lazybones configura
 [source, groovy]
 ----
 bintrayRepositories = [
-    "mariogarcia/grooid-templates",
+    "marioggar/grooid-templates",
     "pledbrook/lazybones-templates"
 ]
 ----
