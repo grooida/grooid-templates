@@ -5,8 +5,10 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import groovy.transform.CompileStatic
 import com.arasthel.swissknife.annotations.OnUIThread
 
+@CompileStatic
 class MainActivity extends Activity {
       
     @Override
@@ -35,8 +37,7 @@ class MainActivity extends Activity {
 
     @OnUIThread
     void showAbout() {
-         AlertDialog.Builder builder = new AlertDialog.Builder(this)
-         builder
+         new AlertDialog.Builder(this)
             .setIcon(R.drawable.ic_launcher)
             .setTitle(R.string.app_name)
             .setView(layoutInflater.inflate(R.layout.about, null, false))

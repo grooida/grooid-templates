@@ -5,6 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import com.arasthel.swissknife.annotations.OnBackground
 
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class SplashScreenActivity extends Activity {
 
     static final long DELAY = 3000

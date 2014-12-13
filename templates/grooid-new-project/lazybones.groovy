@@ -22,8 +22,8 @@ props.targetSdkVersion =
     '21',
     'targetSdkVersion')
 props.buildToolsVersion =
-    ask('Which version of Android Build Tools do you want to use ? [20.0.0]: ',
-    '20.0.0',
+    ask('Which version of Android Build Tools do you want to use ? [21.0.0]: ',
+    '21.0.0',
     'buildToolsVersion')
 
 // --------------------------------------------
