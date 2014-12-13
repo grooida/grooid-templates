@@ -15,7 +15,6 @@ apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 lazybones {
     licenses = ["Apache-2.0"]
     repositoryName = "marioggar/grooid-templates"
-
     repositoryUsername = bintrayUser
     repositoryApiKey = bintrayKey
 }
@@ -27,7 +26,8 @@ asciidoctor {
             'icons': 'font',
             'source-highlighter': 'prettify',
             'toc': 'left',
-            'toclevels': 4
+            'toclevels': 4,
+            'stylesheet':'css/style.css'
         ]
     ]
 }
