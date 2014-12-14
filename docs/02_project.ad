@@ -15,9 +15,9 @@ And then create a new project by executing:
 
 [source, shell]
 ----
-$ lazybones create grooid-create-project 1.1 newandroidproject
+$ lazybones create grooid-new-project newandroidproject
 
-Creating project from template grooid-new-project 1.1 in 'newandroidproject'
+Creating project from template grooid-new-project (latest) in 'newandroidproject'
 Define value for default package [grooid.app]: 
 Which is the minimum version of sdk you want to target ? [19]: 
 Which is the main version of SDK you are targeting ? [21]: 
