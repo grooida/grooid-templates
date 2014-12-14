@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.0">
-<title>Install Grooid Templates</title>
-<style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove the comments around the @import statement below when using this as a custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400";*/
@@ -408,59 +399,3 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 
 .github img {position:absolute; top:0; right:0;}
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-<script>document.addEventListener('DOMContentLoaded', prettyPrint)</script>
-</head>
-<body class="article toc2 toc-left">
-<div id="header">
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_install_grooid_templates">Install Grooid Templates</a></li>
-</ul>
-</div>
-</div>
-<div id="content">
-<div class="sect1">
-<h2 id="_install_grooid_templates">Install Grooid Templates</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The first step is to get Lazybones installed on your system. The easiest way to achieve this goal is to install GVM first</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ curl -s get.gvmtool.net | bash</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Install the latest version of Lazybones with the following command</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ gvm install lazybones</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Next, add the Android Lazybones templates repository to your Lazybones configuration. Edit <strong>$USER_HOME/.lazybones/config.groovy</strong> and paste the following content</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">bintrayRepositories = [
-    "marioggar/grooid-templates",
-    "pledbrook/lazybones-templates"
-]</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="footer">
-<div id="footer-text">
-Last updated 2014-12-12 01:02:34 +00:00
-</div>
-</div>
-</body>
-</html>

@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0">
-<title>Install Grooid Templates</title>
+<title>Android Studio versions</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove the comments around the @import statement below when using this as a custom stylesheet */
@@ -419,39 +419,100 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_install_grooid_templates">Install Grooid Templates</a></li>
+<li><a href="#_android_studio_versions">Android Studio versions</a>
+<ul class="sectlevel2">
+<li><a href="#_android_studio_0_8_x">Android Studio 0.8.x</a></li>
+<li><a href="#_android_studio_1_x">Android Studio 1.x</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
+<div class="paragraph">
+<p><a id="astudio"></a></p>
+</div>
 <div class="sect1">
-<h2 id="_install_grooid_templates">Install Grooid Templates</h2>
+<h2 id="_android_studio_versions">Android Studio versions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The first step is to get Lazybones installed on your system. The easiest way to achieve this goal is to install GVM first</p>
+<p>This section explains how to import your Gradle projects created with grooid-templates to
+Android Studio.</p>
 </div>
-<div class="listingblock">
+<div class="sect2">
+<h3 id="_android_studio_0_8_x">Android Studio 0.8.x</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In order to work with Android Studio 0.8.x you should be using version 1.0 of the
+grooid templates
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>(TODO)</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<strong>grooid-templates</strong> development will be focused on Android Studio 1.x+ . So if you&#8217;re
+still using previous versions it&#8217;s recommended to migrate asap.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_android_studio_1_x">Android Studio 1.x</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In order to work with Android Studio 1.x you should use version 1.1+ of the grooid-templates
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once you&#8217;ve created your project now you can import it in Android Studio. Unfortunately Android Studio
+can&#8217;t recognize a Gradle project as an Android app directly so you have to import it as a "Non-Android-Project".</p>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ curl -s get.gvmtool.net | bash</code></pre>
+<img src="imgs/as_1.0/as_import_project.png" alt="as import project" width="500">
 </div>
 </div>
 <div class="paragraph">
-<p>Install the latest version of Lazybones with the following command</p>
+<p>Then you should select the directory with the Gradle project.</p>
 </div>
-<div class="listingblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ gvm install lazybones</code></pre>
+<img src="imgs/as_1.0/as_import_project_select.png" alt="as import project select" width="500">
 </div>
 </div>
 <div class="paragraph">
-<p>Next, add the Android Lazybones templates repository to your Lazybones configuration. Edit <strong>$USER_HOME/.lazybones/config.groovy</strong> and paste the following content</p>
+<p>Because the project has a embeded Gradle wrapper Android Studio will load that version in order to
+build the project.</p>
 </div>
-<div class="listingblock">
+<div class="paragraph">
+<p>Once the project has been loaded your Android view should look like this:</p>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">bintrayRepositories = [
-    "marioggar/grooid-templates",
-    "pledbrook/lazybones-templates"
-]</code></pre>
+<img src="imgs/as_1.0/as_import_project_end.png" alt="as import project end" width="500">
+</div>
 </div>
 </div>
 </div>
@@ -459,7 +520,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-12-12 01:02:34 +00:00
+Last updated 2014-12-13 23:49:46 +00:00
 </div>
 </div>
 </body>
