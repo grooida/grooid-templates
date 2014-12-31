@@ -48,9 +48,9 @@ dependencies {
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.0-beta-4:grooid'
+    compile 'org.codehaus.groovy:groovy:2.4.0-rc-1:grooid'
     // Groovy Json handling
-    compile ('org.codehaus.groovy:groovy-json:2.4.0-beta-1') {
+    compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
     }
 
