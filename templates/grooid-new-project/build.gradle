@@ -5,12 +5,12 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'me.champeau.gradle:gradle-groovy-android-plugin:0.3.4'
+        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.5'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'me.champeau.gradle.groovy-android'
+apply plugin: 'groovyx.grooid.groovy-android'
 
 android {
 
@@ -48,7 +48,7 @@ dependencies {
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.0-rc-1:grooid'
+    compile 'org.codehaus.groovy:groovy:2.4.0:grooid'
     // Groovy Json handling
     compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
