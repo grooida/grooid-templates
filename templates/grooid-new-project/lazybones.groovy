@@ -22,8 +22,8 @@ props.targetSdkVersion =
     '21',
     'targetSdkVersion')
 props.buildToolsVersion =
-    ask('Which version of Android Build Tools do you want to use ? [21.0.0]: ',
-    '21.0.0',
+    ask('Which version of Android Build Tools do you want to use ? [21]: ',
+    '21',
     'buildToolsVersion')
 props.androidSupportV4 =
     ask('Which version of Android support v4 do you want to add as dependency ? [21.0.0]: ',
