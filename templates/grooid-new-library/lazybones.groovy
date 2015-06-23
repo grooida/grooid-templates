@@ -1,0 +1,74 @@
+import static org.apache.commons.io.FilenameUtils.concat
+import static org.apache.commons.io.FileUtils.moveFile
+
+def props = [:]
+
+// --------------------------------------------
+// --------------- QUESTIONS ------------------
+// --------------------------------------------
+
+props.projectName = projectDir.name
+
+props.defaultPackage =
+    ask('Define value for default package [grooid.app]: ',
+    'grooid.app',
+    'defaultPackage')
+props.minSdkVersion =
+    ask('Which is the minimum version of sdk you want to target ? [19]: ',
+    '19',
+    'minSdkVersion')
+props.targetSdkVersion =
+    ask('Which is the main version of SDK you are targeting ? [21]: ',
+    '21',
+    'targetSdkVersion')
+props.buildToolsVersion =
+    ask('Which version of Android Build Tools do you want to use ? [21]: ',
+    '21',
+    'buildToolsVersion')
+props.androidSupportV4 =
+    ask('Which version of Android support v4 do you want to add as dependency ? [21.0.0]: ',
+    '21.0.0',
+    'androidSupportV4')
+
+// --------------------------------------------
+// ----------- PROCESSING TEMPLATES -----------
+// --------------------------------------------
+
+processTemplates 'README.md', props
+processTemplates 'build.gradle', props
+processTemplates '**/AndroidManifest.xml', props
+processTemplates '**/org.codehaus.groovy.runtime.ExtensionModule', props
+
+// --------------------------------------------
+// -------- PROCESSING GROOVY TEMPLATES -------
+// --------------------------------------------
+
+def groovyCodeTemplatesPath = new File(projectDir, 'code')
+
+def groovyCodeBasePath = 'src/main/groovy'
+def groovyCodePackagePath = props.defaultPackage.replace('.' as char, '/' as char)
+def groovyCodeDestinationPath =
+    new File(
+        projectDir,
+        concat(groovyCodeBasePath, groovyCodePackagePath))
+
+// Looping over all groovy code templates
+groovyCodeTemplatesPath
+   .listFiles()
+   .each { File file ->
+
+       // Processing each template
+       processTemplates "**/${file.name}", props
+
+       // Moving groovy file to the right place
+       def sourceName = file.name.replace('gtpl','groovy')
+       def destination = new File(groovyCodeDestinationPath, sourceName)
+
+       moveFile(file, destination)
+   }
+
+// --------------------------------------------
+// --------------- CLEANING UP ----------------
+// --------------------------------------------
+
+groovyCodeTemplatesPath.delete()

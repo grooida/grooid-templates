@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'groovyx.grooid.groovy-android'
+
+android {
+
+    compileSdkVersion ${targetSdkVersion}
+    buildToolsVersion "${buildToolsVersion}"
+
+    defaultConfig {
+        minSdkVersion ${minSdkVersion}
+        targetSdkVersion ${targetSdkVersion}
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+    maven { url = 'https://oss.jfrog.org/oss-snapshot-local/' }
+    maven { url = 'http://repository.codehaus.org' }
+}
+
+dependencies {
+
+    // Android tools
+    compile 'com.android.support:support-v4:${androidSupportV4}'
+    // Groovy version
+    compile 'org.codehaus.groovy:groovy:2.4.3:grooid'
+    // Rest handling
+    compile 'com.squareup.retrofit:retrofit:1.7.1'
+    // Getting rid of boiler plate code
+    compile 'com.arasthel:swissknife:1.2.2'
+
+}

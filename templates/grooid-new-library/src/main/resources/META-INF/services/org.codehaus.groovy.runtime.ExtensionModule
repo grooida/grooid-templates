@@ -1,0 +1,3 @@
+moduleName=${defaultPackage}
+moduleVersion=1.0
+extensionClasses=${defaultPackage}.Widgets,${defaultPackage}.Activities
