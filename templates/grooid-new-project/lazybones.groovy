@@ -1,34 +1,21 @@
 import static org.apache.commons.io.FilenameUtils.concat
 import static org.apache.commons.io.FileUtils.moveFile
 
-def props = [:]
+// --------------------------------------------
+// --------------- DEFAULTS -------------------
+// --------------------------------------------
+
+def props = [projectName: projectDir.name]
 
 // --------------------------------------------
 // --------------- QUESTIONS ------------------
 // --------------------------------------------
 
-props.projectName = projectDir.name
-
-props.defaultPackage =
-    ask('Define value for default package [grooid.app]: ',
-    'grooid.app',
-    'defaultPackage')
-props.minSdkVersion =
-    ask('Which is the minimum version of sdk you want to target ? [19]: ',
-    '19',
-    'minSdkVersion')
-props.targetSdkVersion =
-    ask('Which is the main version of SDK you are targeting ? [21]: ',
-    '21',
-    'targetSdkVersion')
-props.buildToolsVersion =
-    ask('Which version of Android Build Tools do you want to use ? [21]: ',
-    '21',
-    'buildToolsVersion')
-props.androidSupportV4 =
-    ask('Which version of Android support v4 do you want to add as dependency ? [21.0.0]: ',
-    '21.0.0',
-    'androidSupportV4')
+props.defaultPackage    = ask('DEFAULT source code package ? [grooid.app]: ', 'grooid.app', 'defaultPackage')
+props.minSdkVersion     = ask('MIN version of SDK you want to target ? [19]: ', '19', 'minSdkVersion')
+props.targetSdkVersion  = ask('MAX version of SDK you want to target ? [21]: ', '21', 'targetSdkVersion')
+props.buildToolsVersion = ask('DEFAULT version for Android Build Tools ? [22.0.1]: ', '22.0.1', 'buildToolsVersion')
+props.androidSupportV4  = ask('DEFAULT version for Android support v4 ? [21.0.0]: ', '21.0.0', 'androidSupportV4')
 
 // --------------------------------------------
 // ----------- PROCESSING TEMPLATES -----------
@@ -38,59 +25,52 @@ processTemplates 'README.md', props
 processTemplates 'build.gradle', props
 processTemplates '**/strings.xml', props
 processTemplates '**/AndroidManifest.xml', props
+processTemplates '**/layout/**.xml',props
 
-// --------------------------------------------
-// -------- PROCESSING GROOVY TEMPLATES -------
-// --------------------------------------------
+// -------------------------------------------------
+// -------- PROCESSING GROOVY MAIN TEMPLATES -------
+// -------------------------------------------------
 
-def groovyCodeTemplatesPath = new File(projectDir, 'code')
+def defaultBaseCodePath         = new File(projectDir, 'code')
+def groovyCodePackagePath       = props.defaultPackage.replace('.' as char, '/' as char)
 
-def groovyCodeBasePath = 'src/main/groovy'
-def groovyCodePackagePath = props.defaultPackage.replace('.' as char, '/' as char)
-def groovyCodeDestinationPath =
-    new File(
-        projectDir,
-        concat(groovyCodeBasePath, groovyCodePackagePath))
+def groovyCodeTemplatesPath     = new File(defaultBaseCodePath, 'main')
+def groovyCodeBasePath          = 'src/main/groovy'
+def groovyCodeDestinationPath   = new File(projectDir, concat(groovyCodeBasePath, groovyCodePackagePath))
 
-// Looping over all groovy code templates
-groovyCodeTemplatesPath
-   .listFiles()
-   .each { File file ->
+processCode(groovyCodeTemplatesPath, groovyCodeDestinationPath, props)
 
-       // Processing each template
-       processTemplates "**/${file.name}", props
+// -------------------------------------------------
+// -------- PROCESSING GROOVY TEST TEMPLATES -------
+// -------------------------------------------------
 
-       // Moving groovy file to the right place
-       def sourceName = file.name.replace('gtpl','groovy')
-       def destination = new File(groovyCodeDestinationPath, sourceName)
+def groovyCodeTestTemplatesPath     = new File(defaultBaseCodePath, 'test')
+def groovyCodeTestBasePath          = 'src/androidTest/groovy'
+def groovyCodeTestDestinationPath   = new File(projectDir, concat(groovyCodeTestBasePath, groovyCodePackagePath))
 
-       moveFile(file, destination)
-   }
+processCode(groovyCodeTestTemplatesPath, groovyCodeTestDestinationPath, props)
 
-// --------------------------------------------
-// -------- PROCESSING ANDROID LAYOUTS  -------
-// --------------------------------------------
+// delete 'code' directory
+defaultBaseCodePath.deleteOnExit()
 
-def layoutsTemplatesPath = new File(projectDir, 'layouts')
-def layoutsBasePath = new File(projectDir,'src/main/res/layout/')
-
-layoutsTemplatesPath
-    .listFiles()
-    .each { File source ->
-
+/**
+ * Process source file templates at fromDir and moves them at
+ * toDir. Then deletes source file templates.
+ *
+ * @param fromDir where the templates are located
+ * @param toDir final destination
+ **/
+void processCode(File fromDir, File toDir, Map projectProperties) {
+    fromDir.listFiles().each { File file ->
         // Processing each template
-       processTemplates "**/${source.name}", props
+        processTemplates "**/${file.name}", projectProperties
 
-       // Moving groovy file to the right place
-       def destination = new File(layoutsBasePath, source.name)
+        // Moving groovy file to the right place
+        def sourceName = file.name.replace('gtpl','groovy')
+        def destination = new File(toDir, sourceName)
 
-       moveFile(source, destination)
+        moveFile(file, destination)
+    }
 
-     }
-
-// --------------------------------------------
-// --------------- CLEANING UP ----------------
-// --------------------------------------------
-
-groovyCodeTemplatesPath.delete()
-layoutsTemplatesPath.delete()
+    fromDir.delete()
+}
