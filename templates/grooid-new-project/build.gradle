@@ -23,6 +23,12 @@ android {
         targetSdkVersion ${targetSdkVersion}
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt' // Needed by Spock/Android
     }
 
     lintOptions {
@@ -39,9 +45,7 @@ android {
 
 repositories {
     jcenter()
-    mavenLocal()
-    maven { url = 'https://oss.jfrog.org/oss-snapshot-local/' }
-    maven { url = 'http://repository.codehaus.org' }
+    mavenCentral()
 }
 
 dependencies {
@@ -49,16 +53,26 @@ dependencies {
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.3:grooid'
+    compile 'org.codehaus.groovy:groovy:2.4.4:grooid'
     // Groovy Json handling
     compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
     }
 
-    // Rest handling
-    compile 'com.squareup.retrofit:retrofit:1.7.1'
     // Getting rid of boiler plate code
-    compile 'com.arasthel:swissknife:1.1.4'
+    compile 'com.arasthel:swissknife:1.3.1'
+    // Rest handling
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
     // Imaging
-    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Spock/Android
+    androidTestCompile "com.andrewreitz:spock-android:1.2.1"
+    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
+    androidTestCompile('org.spockframework:spock-core:1.0-groovy-2.4') {
+        exclude group: 'org.codehaus.groovy'
+        exclude group: 'junit'
+    }
+
 }
