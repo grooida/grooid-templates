@@ -420,6 +420,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_create_your_first_project">Create your first project</a></li>
+<li><a href="#_create_a_library_module">Create a library module</a></li>
 </ul>
 </div>
 </div>
@@ -436,7 +437,8 @@ with:</p>
 <pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones list
 Available templates in marioggar/grooid-templates:
 
-marioggar/grooid-new-project</code></pre>
+marioggar/grooid-new-project
+marioggar/grooid-new-library</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -446,18 +448,22 @@ marioggar/grooid-new-project</code></pre>
 <div class="content">
 <pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones create grooid-new-project newandroidproject
 
-Creating project from template grooid-new-project (latest) in 'newandroidproject'
-Define value for default package [grooid.app]:
-Which is the minimum version of sdk you want to target ? [19]:
-Which is the main version of SDK you are targeting ? [21]:
-Which version of Android Build Tools do you want to use ? [20.0.0]:
+Creating project from template grooid-new-project 1.1.4 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
 
 What is newandroidproject
 --------------------------------------
 
 You've just created a basic Android-Groovy application. It provides a standard project structure and
 a basic Gradle plugin. Now is up to you to add your source files and edit them with Android Studio
-and have fun :)</code></pre>
+and have fun :)
+
+
+Project created in newandroidproject!</code></pre>
 </div>
 </div>
 <div class="admonitionblock warning">
@@ -505,10 +511,36 @@ build the project.</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_create_a_library_module">Create a library module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to create an Android library then you should use the
+<code>create-new-library</code> template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones create grooid-new-library newandroidproject
+
+Creating project from template grooid-new-project 1.1.4 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then follow the same instructions than in previous chaper to import
+your project to Android Studio.</p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-12-14 00:00:26 +00:00
+Last updated 2015-07-17 09:10:39 CEST
 </div>
 </div>
 </body>
