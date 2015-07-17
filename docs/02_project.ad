@@ -18,11 +18,12 @@ And then create a new project by executing:
 ----
 $ lazybones create grooid-new-project newandroidproject
 
-Creating project from template grooid-new-project (latest) in 'newandroidproject'
-Define value for default package [grooid.app]: 
-Which is the minimum version of sdk you want to target ? [19]: 
-Which is the main version of SDK you are targeting ? [21]: 
-Which version of Android Build Tools do you want to use ? [20.0.0]:
+Creating project from template grooid-new-project 1.1.4 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
 
 What is newandroidproject
 --------------------------------------
@@ -30,6 +31,9 @@ What is newandroidproject
 You've just created a basic Android-Groovy application. It provides a standard project structure and
 a basic Gradle plugin. Now is up to you to add your source files and edit them with Android Studio
 and have fun :)
+
+
+Project created in newandroidproject!
 
 ----
 
@@ -62,11 +66,12 @@ If you want to create an Android library then you should use the
 ----
 $ lazybones create grooid-new-library newandroidproject
 
-Creating project from template grooid-new-project (latest) in 'newandroidproject'
-Define value for default package [grooid.app]: 
-Which is the minimum version of sdk you want to target ? [19]: 
-Which is the main version of SDK you are targeting ? [21]: 
-Which version of Android Build Tools do you want to use ? [20.0.0]:
+Creating project from template grooid-new-project 1.1.4 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
 ...
 ----
 
