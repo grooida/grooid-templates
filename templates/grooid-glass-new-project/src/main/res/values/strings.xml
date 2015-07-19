@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">${projectName}</string>
+    <string name="hello">Groovy And Android :)</string>
+    <string name="about">About</string>
+    <string name="about_credits">Check http://www.groovy-lang.org</string>
+    <string name="about_descrip">This is an Android app written in Groovy</string>
+
+</resources>
