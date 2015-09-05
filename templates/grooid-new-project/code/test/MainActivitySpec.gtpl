@@ -15,7 +15,7 @@ class MainActivitySpec extends AndroidSpecification {
         TextView textView = mainActivity.findViewById(R.id.groovy_label)
 
         expect: 'the content to contain Groovy'
-        textView.text =~ 'Groovy'
+        textView.text ==~ 'Groovy.*'
     }
 
 }
