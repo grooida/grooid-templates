@@ -5,7 +5,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.2.3'
         classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
-        classpath 'net.kaleidos.gradle.plugins:emerger:0.0.1'
+        classpath 'net.kaleidos.gradle.plugins:emerger:0.0.2'
     }
 }
 
