@@ -1,5 +1,7 @@
 == Technologies included
 
+=== Libraries
+
 The project you've just created has some useful dependencies in order not to
 start from scratch.
 
@@ -19,3 +21,20 @@ A powerful image downloading and caching library for Android
 * `Android-Spock` (https://github.com/pieces029/android-spock)
 
 Use Spock (https://github.com/spockframework) tests in your Android app.
+
+=== Emerger plugin
+
+An `Android/Groovy` project can make use of more Groovy libraries as well, that's
+great, but the problem comes when using module extensions.
+
+One limitation of an Android application building process is that any app
+should beware of repeating file names within the same directory hierarchy.
+
+Because module extensions are all build with a specific file put in a specific
+directory, that eventually will make Android build process to complain.
+
+The `Emerger` plugin is aimed for merging all module extension descriptors into
+one to overcome the Android build process limitation.
+
+At the moment the **Emerger** plugin is in beta phase, so the more feedback
+the better at https://github.com/kaleidos/emerger
