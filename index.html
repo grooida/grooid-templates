@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.0">
+<meta name="generator" content="Asciidoctor 1.5.2">
 <meta name="author" content="Mario Garcia">
 <title>Android Groovy Templates</title>
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 <script>document.addEventListener('DOMContentLoaded', prettyPrint)</script>
@@ -26,7 +27,12 @@
 <li><a href="#_install_grooid_templates">2. Install Grooid Templates</a></li>
 <li><a href="#_create_your_first_project">3. Create your first project</a></li>
 <li><a href="#_create_a_library_module">4. Create a library module</a></li>
-<li><a href="#_technologies_included">5. Technologies included</a></li>
+<li><a href="#_technologies_included">5. Technologies included</a>
+<ul class="sectlevel2">
+<li><a href="#_libraries">5.1. Libraries</a></li>
+<li><a href="#_emerger_plugin">5.2. Emerger plugin</a></li>
+</ul>
+</li>
 <li><a href="#_android_studio_versions">6. Android Studio versions</a>
 <ul class="sectlevel2">
 <li><a href="#_android_studio_0_8_x">6.1. Android Studio 0.8.x</a></li>
@@ -207,6 +213,8 @@ your project to Android Studio.</p>
 <div class="sect1">
 <h2 id="_technologies_included">5. Technologies included</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_libraries">5.1. Libraries</h3>
 <div class="paragraph">
 <p>The project you&#8217;ve just created has some useful dependencies in order not to
 start from scratch.</p>
@@ -252,8 +260,32 @@ extensions and DSLs</p>
 <div class="paragraph">
 <p>Use Spock (<a href="https://github.com/spockframework" class="bare">https://github.com/spockframework</a>) tests in your Android app.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_emerger_plugin">5.2. Emerger plugin</h3>
+<div class="paragraph">
+<p>An <code>Android/Groovy</code> project can make use of more Groovy libraries as well, that&#8217;s
+great, but the problem comes when using module extensions.</p>
+</div>
+<div class="paragraph">
+<p>One limitation of an Android application building process is that any app
+should beware of repeating file names within the same directory hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>Because module extensions are all build with a specific file put in a specific
+directory, that eventually will make Android build process to complain.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Emerger</code> plugin is aimed for merging all module extension descriptors into
+one to overcome the Android build process limitation.</p>
+</div>
+<div class="paragraph">
+<p>At the moment the <strong>Emerger</strong> plugin is in beta phase, so the more feedback
+the better at <a href="https://github.com/kaleidos/emerger" class="bare">https://github.com/kaleidos/emerger</a></p>
+</div>
 <div class="paragraph">
 <p><a id="astudio"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -345,7 +377,7 @@ build the project.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-02-01 19:48:20 CET
+Last updated 2015-09-05 18:40:32 +02:00
 </div>
 </div>
 </body>
