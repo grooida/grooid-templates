@@ -3,8 +3,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.8'
     }
 }
 
@@ -44,7 +44,7 @@ dependencies {
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.3:grooid'
+    compile 'org.codehaus.groovy:groovy:2.4.5:grooid'
     // Groovy Json handling
     compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
         transitive = false
