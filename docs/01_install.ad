@@ -4,14 +4,15 @@ The first step is to get Lazybones installed on your system. The easiest way to 
 
 [source,shell]
 ----
-$ curl -s get.gvmtool.net | bash
+$ curl -s "https://get.sdkman.io" | bash
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"
 ----
 
 Install the latest version of Lazybones with the following command
 
 [source,shell]
 ----
-$ gvm install lazybones
+$ sdk install lazybones
 ----
 
 Next, add the Android Lazybones templates repository to your Lazybones configuration. Edit *$USER_HOME/.lazybones/config.groovy* and paste the following content
