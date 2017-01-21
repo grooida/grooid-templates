@@ -1,0 +1,22 @@
+=== Library
+
+NOTE: latest `grooid-new-library` version is: {grooid-new-library}
+
+If you want to create an Android library then you should use the
+`create-new-library` template:
+
+[source, shell]
+----
+$ lazybones create grooid-new-library newandroidproject
+
+Creating project from template grooid-new-project 1.1.4 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
+...
+----
+
+Then follow the same instructions than in previous chaper to import
+your project to Android Studio.

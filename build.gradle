@@ -1,3 +1,10 @@
+ext {
+    versions = [
+        grooid_new_library: new File('templates/grooid-new-library/VERSION').text.trim(),
+        grooid_new_project: new File('templates/grooid-new-project/VERSION').text.trim()
+    ]
+}
+
 buildscript {
     repositories {
         jcenter()
@@ -5,7 +12,7 @@ buildscript {
     }
     dependencies {
         classpath "uk.co.cacoethes:lazybones-gradle:1.2.3"
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
     }
 }
 
@@ -21,10 +28,14 @@ lazybones {
 
 asciidoctor {
     sourceDir 'docs'
-    attributes 'icons': 'font',
-               'source-highlighter': 'prettify',
-               'toc': 'left',
-               'toclevels': 4
+    attributes 'source-highlighter'  :  'prettify',
+               toc                   :  'left',
+               icons                 :  'font',
+               toclevels             :  4,
+               stylesheet            : 'css/style.css',
+               'pdf-style'           :  'default',
+               'grooid-new-project'  :  versions.grooid_new_project,
+               'grooid-new-library'  :  versions.grooid_new_library
     resources {
         from(sourceDir) {
             include 'css/**'
