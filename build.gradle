@@ -15,8 +15,8 @@ apply plugin: 'org.asciidoctor.convert'
 lazybones {
     licenses = ["Apache-2.0"]
     repositoryName = "marioggar/grooid-templates"
-    repositoryUsername = bintrayUser
-    repositoryApiKey = bintrayKey
+    repositoryUsername = project.properties.bintrayUser
+    repositoryApiKey = project.properties.bintrayKey
 }
 
 asciidoctor {
