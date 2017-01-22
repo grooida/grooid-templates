@@ -11,7 +11,7 @@ buildscript {
         maven { url "http://dl.bintray.com/pledbrook/plugins" }
     }
     dependencies {
-        classpath "uk.co.cacoethes:lazybones-gradle:1.2.3"
+        classpath "uk.co.cacoethes:lazybones-gradle:1.2.4"
         classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
     }
 }
@@ -20,10 +20,12 @@ apply plugin: "uk.co.cacoethes.lazybones-templates"
 apply plugin: 'org.asciidoctor.convert'
 
 lazybones {
-    licenses = ["Apache-2.0"]
-    repositoryName = "marioggar/grooid-templates"
+    repositoryName = "grooida/grooid-templates"
     repositoryUsername = project.properties.bintrayUser
     repositoryApiKey = project.properties.bintrayKey
+
+    licenses = ["Apache-2.0"]
+    vcsUrl="https://github.com/grooida/grooid-templates"
 }
 
 asciidoctor {
