@@ -1,4 +1,4 @@
-== Install Grooid Templates
+== Installation
 
 The first step is to get Lazybones installed on your system. The
 easiest way to achieve this goal is to install
@@ -24,7 +24,7 @@ the following content
 [source, groovy]
 ----
 bintrayRepositories = [
-    "marioggar/grooid-templates",
+    "grooida/grooid-templates",
     "pledbrook/lazybones-templates"
 ]
 ----

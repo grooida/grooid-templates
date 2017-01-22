@@ -1,6 +1,6 @@
 === Library
 
-NOTE: latest `grooid-new-library` version is: {grooid-new-library}
+NOTE: latest `grooid-new-library` template version is: {grooid-new-library}
 
 If you want to create an Android library then you should use the
 `create-new-library` template:

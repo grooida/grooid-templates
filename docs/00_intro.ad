@@ -2,3 +2,11 @@
 
 This project tries to help Groovy/Android developers to speed up
 project creation and configuration by using predefined templates.
+
+=== License
+
+Grooid templates are under http://www.apache.org/licenses/[Apache License 2.0]
+
+=== Github
+
+You can find source code at https://github.com/grooida/grooid-templates

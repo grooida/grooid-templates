@@ -9,7 +9,3 @@ include::00_intro.ad[]
 include::01_install.ad[]
 
 include::02_templates.ad[]
-
-include::03_technologies.ad[]
-
-include::04_astudio.ad[]
