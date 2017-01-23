@@ -25,6 +25,7 @@ lazybones {
     repositoryName = "grooida/grooid-templates"
     repositoryUsername = project.properties.bintrayUser
     repositoryApiKey = project.properties.bintrayKey
+    publish=true
 
     licenses = ["Apache-2.0"]
     vcsUrl="https://github.com/grooida/grooid-templates"
