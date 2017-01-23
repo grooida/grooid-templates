@@ -7,4 +7,4 @@ templates.
 
 Please read the [documentation](http://grooida.github.io/grooid-templates/)
 
-![Grooid templates](https://github.com/grooida/grooid-templates/raw/release_1_1_7/docs/imgs/grooid-templates.png)
+![Grooid templates](https://github.com/grooida/grooid-templates/raw/master/docs/imgs/grooid-templates.png)
