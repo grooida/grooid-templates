@@ -17,8 +17,9 @@ buildscript {
     }
 }
 
-apply plugin: "uk.co.cacoethes.lazybones-templates"
+apply plugin: 'uk.co.cacoethes.lazybones-templates'
 apply plugin: 'org.asciidoctor.convert'
+apply plugin: 'org.ajoberstar.github-pages'
 
 lazybones {
     repositoryName = "grooida/grooid-templates"
@@ -57,7 +58,7 @@ githubPages {
 
     //https://github.com/ajoberstar/gradle-git/wiki/Travis-CI-Authentication
     credentials {
-        username = project.properties.github_token ?: System.getenv('GH_TOKEN')
+        username = project.properties.githubToken
         password = ''
     }
 }
