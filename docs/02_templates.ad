@@ -1,0 +1,7 @@
+== Templates
+
+These are the current available templates.
+
+include::templates/grooid_new_project.ad[]
+
+include::templates/grooid_new_library.ad[]

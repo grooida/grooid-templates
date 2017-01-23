@@ -6,6 +6,7 @@ import static org.apache.commons.io.FileUtils.moveFile
 // --------------------------------------------
 
 def props = [projectName: projectDir.name]
+def changelog = new File(projectDir, 'CHANGELOG.md')
 
 // --------------------------------------------
 // --------------- QUESTIONS ------------------
@@ -52,6 +53,9 @@ processCode(groovyCodeTestTemplatesPath, groovyCodeTestDestinationPath, props)
 
 // delete 'code' directory
 defaultBaseCodePath.deleteOnExit()
+
+// delete 'CHANGELOG.md'
+changelog.deleteOnExit()
 
 /**
  * Process source file templates at fromDir and moves them at

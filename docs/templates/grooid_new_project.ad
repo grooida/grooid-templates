@@ -1,0 +1,127 @@
+=== App
+
+NOTE: latest `grooid-new-project` template version is: {grooid-new-project}
+
+We’re now ready to create the project. You can list all available
+templates from the command line with:
+
+[source, shell]
+----
+$ lazybones list
+Available templates in marioggar/grooid-templates:
+
+marioggar/grooid-new-project
+marioggar/grooid-new-library
+----
+
+And then create a new project by executing:
+
+[source, shell]
+----
+$ lazybones create name-of-the-template [optional-template-version] name-of-the-project
+----
+
+NOTE: If no version is used, then the latest is implied
+
+Lets see an example:
+
+[source, shell, subs="attributes"]
+----
+$ lazybones create grooid-new-project newandroidproject
+
+Creating project from template grooid-new-project {grooid-new-project} in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
+
+What is newandroidproject
+--------------------------------------
+
+You've just created a basic Android-Groovy application. It provides a standard project structure and
+a basic Gradle plugin. Now is up to you to add your source files and edit them with Android Studio
+and have fun :)
+
+
+Project created in newandroidproject!
+
+----
+
+Now you can import your project to Android Studio.
+
+==== Import to AS
+
+IMPORTANT: This section has been written using `Android Studio
+2.2.3`. It's always recommended to use the latest available AS.
+
+Open Android Studio and click `Import project (Eclipse ADT, Gradle, etc.)`:
+
+image::imgs/as/import_initial.png[width=500, align=center]
+
+Then you should select the directory containing the Gradle project.
+
+image::imgs/as/import_select_directory.png[width=500, align=center]
+
+Because the project has an embeded Gradle wrapper, Android Studio will
+load that version in order to build the project. Once the project has
+been loaded your Android view should look like this:
+
+image::imgs/as/import_imported_project.png[width=500, align=center]
+
+The project also is configured to be executed in an emulator. If you
+have already configured an emulator with the right SDK version, you
+can click on the play button found on the top in the tools bar.
+
+image::imgs/as/import_play.png[width=500, align=center]
+
+Select the proper emulator image (It will depend on the configured
+SDK).
+
+image::imgs/as/import_select_emulator.png[width=500, align=center]
+
+And finally you will see the exaple application running.
+
+image::imgs/as/import_up_and_running.png[width=500, align=center]
+
+Now you have the base is all up to you. Happy coding :)
+
+==== Libraries
+
+The project you've just created has some useful dependencies in order not to
+start from scratch.
+
+* `Swissknife` (https://github.com/Arasthel/SwissKnife)
+
+A multi-purpose library containing view injection and threading handling for Android using Groovy AST transformations,
+extensions and DSLs
+
+* `Retrofit` (http://square.github.io/retrofit/)
+
+An easy REST client for Android and Java
+
+* `Picasso` (http://square.github.io/picasso/)
+
+A powerful image downloading and caching library for Android
+
+* `Android-Spock` (https://github.com/pieces029/android-spock)
+
+Use Spock (https://github.com/spockframework) tests in your Android app.
+
+==== Emerger plugin
+
+An `Android/Groovy` project can make use of more Groovy libraries as
+well, that's great, but the problem comes when using module
+extensions. One limitation of an Android application building process
+is that any app should beware of repeating file names within the same
+directory hierarchy.
+
+Because module extensions are all build with a specific file put in a
+specific directory, that eventually will make Android build process to
+complain.
+
+The `Emerger` plugin is aimed for merging all module extension
+descriptors into one to overcome the Android build process limitation.
+
+IMPORTANT: At the moment the **Emerger** plugin is in beta phase, so
+the more feedback the better at https://github.com/grooida/emerger

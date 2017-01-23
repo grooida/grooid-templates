@@ -1,6 +1,8 @@
-== Install Grooid Templates
+== Installation
 
-The first step is to get Lazybones installed on your system. The easiest way to achieve this goal is to install GVM first
+The first step is to get Lazybones installed on your system. The
+easiest way to achieve this goal is to install
+http://sdkman.io/[SDKMAN] first:
 
 [source,shell]
 ----
@@ -8,19 +10,21 @@ $ curl -s "https://get.sdkman.io" | bash
 $ source "$HOME/.sdkman/bin/sdkman-init.sh"
 ----
 
-Install the latest version of Lazybones with the following command
+Install the latest version of Lazybones with the following command:
 
 [source,shell]
 ----
 $ sdk install lazybones
 ----
 
-Next, add the Android Lazybones templates repository to your Lazybones configuration. Edit *$USER_HOME/.lazybones/config.groovy* and paste the following content
+Next, add the Android Lazybones templates repository to your Lazybones
+configuration. Edit `$USER_HOME/.lazybones/config.groovy` and paste
+the following content
 
 [source, groovy]
 ----
 bintrayRepositories = [
-    "marioggar/grooid-templates",
+    "grooida/grooid-templates",
     "pledbrook/lazybones-templates"
 ]
 ----

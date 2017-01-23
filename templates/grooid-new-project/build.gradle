@@ -3,15 +3,13 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.8'
-        classpath 'net.kaleidos.gradle.plugins:emerger:0.0.2'
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'groovyx.grooid.groovy-android'
-apply plugin: 'net.kaleidos.gradle.plugins.emerger'
+apply plugin: 'groovyx.android'
 
 android {
 
@@ -28,7 +26,9 @@ android {
     }
 
     packagingOptions {
-        exclude 'LICENSE.txt' // Needed by Spock/Android
+        exclude 'LICENSE.txt' // Spock/Android
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/groovy-release-info.properties' // groovy-XXX artifacts
     }
 
     lintOptions {
@@ -40,7 +40,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-
 }
 
 repositories {
@@ -52,10 +51,11 @@ dependencies {
 
     // Android tools
     compile 'com.android.support:support-v4:${androidSupportV4}'
+
     // Groovy version
-    compile 'org.codehaus.groovy:groovy:2.4.5:grooid'
+    compile "org.codehaus.groovy:groovy:2.4.8:grooid"
     // Groovy Json handling
-    compile ('org.codehaus.groovy:groovy-json:2.4.0-rc-1') {
+    compile ('org.codehaus.groovy:groovy-json:2.4.8') {
         transitive = false
     }
 
@@ -66,7 +66,7 @@ dependencies {
     // Imaging
     compile 'com.squareup.picasso:picasso:2.5.2'
 
-    // Spock/Android
+    // Testing with Spock/Android
     androidTestCompile "com.andrewreitz:spock-android:1.2.1"
     androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
     androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
@@ -74,5 +74,4 @@ dependencies {
         exclude group: 'org.codehaus.groovy'
         exclude group: 'junit'
     }
-
 }

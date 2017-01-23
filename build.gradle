@@ -1,34 +1,64 @@
+ext {
+    versions = [
+        grooid_new_library: new File('templates/grooid-new-library/VERSION').text.trim(),
+        grooid_new_project: new File('templates/grooid-new-project/VERSION').text.trim()
+    ]
+}
+
 buildscript {
     repositories {
         jcenter()
         maven { url "http://dl.bintray.com/pledbrook/plugins" }
     }
     dependencies {
-        classpath "uk.co.cacoethes:lazybones-gradle:1.2.3"
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+        classpath 'org.ajoberstar:gradle-git:1.4.2'
+        classpath "uk.co.cacoethes:lazybones-gradle:1.2.4"
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
     }
 }
 
-apply plugin: "uk.co.cacoethes.lazybones-templates"
+apply plugin: 'uk.co.cacoethes.lazybones-templates'
 apply plugin: 'org.asciidoctor.convert'
+apply plugin: 'org.ajoberstar.github-pages'
 
 lazybones {
+    repositoryName = "grooida/grooid-templates"
+    repositoryUsername = project.properties.bintrayUser
+    repositoryApiKey = project.properties.bintrayKey
+
     licenses = ["Apache-2.0"]
-    repositoryName = "marioggar/grooid-templates"
-    repositoryUsername = bintrayUser
-    repositoryApiKey = bintrayKey
+    vcsUrl="https://github.com/grooida/grooid-templates"
 }
 
 asciidoctor {
     sourceDir 'docs'
-    attributes 'icons': 'font',
-               'source-highlighter': 'prettify',
-               'toc': 'left',
-               'toclevels': 4
+    attributes 'source-highlighter'  :  'prettify',
+               toc                   :  'left',
+               icons                 :  'font',
+               toclevels             :  4,
+               stylesheet            : 'css/style.css',
+               'pdf-style'           :  'default',
+               'grooid-new-project'  :  versions.grooid_new_project,
+               'grooid-new-library'  :  versions.grooid_new_library
     resources {
         from(sourceDir) {
             include 'css/**'
             include 'imgs/**'
         }
+    }
+}
+
+githubPages {
+    repoUri = 'https://github.com/grooida/grooid-templates.git'
+    deleteExistingFiles = true
+
+    pages {
+        from file('build/asciidoc/html5')
+    }
+
+    //https://github.com/ajoberstar/gradle-git/wiki/Travis-CI-Authentication
+    credentials {
+        username = project.properties.githubToken
+        password = ''
     }
 }
