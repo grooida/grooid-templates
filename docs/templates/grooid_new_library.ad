@@ -5,11 +5,11 @@ NOTE: latest `grooid-new-library` template version is: {grooid-new-library}
 If you want to create an Android library then you should use the
 `create-new-library` template:
 
-[source, shell]
+[source, shell, subs="attributes"]
 ----
 $ lazybones create grooid-new-library newandroidproject
 
-Creating project from template grooid-new-project 1.1.4 in 'newandroidproject'
+Creating project from template grooid-new-project {grooid-new-library} in 'newandroidproject'
 DEFAULT source code package ? [grooid.app]:
 MIN version of SDK you want to target ? [19]:
 MAX version of SDK you want to target ? [21]:

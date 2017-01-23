@@ -16,6 +16,15 @@ marioggar/grooid-new-library
 
 And then create a new project by executing:
 
+[source, shell]
+----
+$ lazybones create name-of-the-template [optional-template-version] name-of-the-project
+----
+
+NOTE: If no version is used, then the latest is implied
+
+Lets see an example:
+
 [source, shell, subs="attributes"]
 ----
 $ lazybones create grooid-new-project newandroidproject
