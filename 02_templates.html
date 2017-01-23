@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.2">
-<title>Android Studio versions</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
+<meta name="generator" content="Asciidoctor 1.5.3">
+<title>Templates</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove the comments around the @import statement below when using this as a custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400";*/
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400";*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
@@ -77,7 +76,7 @@ a:hover,a:focus{color:#1d4b8f}
 a img{border:none}
 p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#016a36;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
 h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
 h1{font-size:2.125em}
 h2{font-size:1.6875em}
@@ -137,7 +136,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #header:after,#content:after,#footnotes:after,#footer:after{clear:both}
 #content{margin-top:1.25em}
 #content:before{content:none}
-#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child{color:#016833;margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
 #header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
 #header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
@@ -150,17 +149,17 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #header #revnumber{text-transform:capitalize}
 #header #revnumber:after{content:"\00a0"}
 #content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em; background-color:#3483a1;}
 #toc>ul{margin-left:.125em}
 #toc ul.sectlevel0>li>a{font-style:italic}
 #toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
 #toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
-#toc a{text-decoration:none}
+#toc a{text-decoration:none; color: white;}
 #toc a:active{text-decoration:underline}
-#toctitle{color:#7a2518;font-size:1.2em}
+#toctitle{font-size:1.2em;color: #a4c639;font-weight:400;}
 @media only screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2{margin-top:0!important;background-color:#3483a1;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
 #toc.toc2 ul ul{margin-left:0;padding-left:1em}
@@ -274,8 +273,8 @@ dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
 ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
 ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist li>p:first-child>.fa-check-square-o:first-child,ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{position:relative;top:1px}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -380,7 +379,7 @@ p{margin-bottom:1.25rem}
 *{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
 a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after,a[href^="mailto:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
 abbr[title]:after{content:" (" attr(title) ")"}
 pre,blockquote,tr,img{page-break-inside:avoid}
 thead{display:table-header-group}
@@ -407,39 +406,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
+
+.github img {position:absolute; top:0; right:0;}
+
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-<script>document.addEventListener('DOMContentLoaded', prettyPrint)</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_android_studio_versions">Android Studio versions</a>
+<li><a href="#_templates">Templates</a>
 <ul class="sectlevel2">
-<li><a href="#_android_studio_0_8_x">Android Studio 0.8.x</a></li>
-<li><a href="#_android_studio_1_x">Android Studio 1.x</a></li>
+<li><a href="#_app">App</a>
+<ul class="sectlevel3">
+<li><a href="#_import_to_as">Import to AS</a></li>
+<li><a href="#_libraries">Libraries</a></li>
+<li><a href="#_emerger_plugin">Emerger plugin</a></li>
+</ul>
+</li>
+<li><a href="#_library">Library</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="paragraph">
-<p><a id="astudio"></a></p>
-</div>
 <div class="sect1">
-<h2 id="_android_studio_versions">Android Studio versions</h2>
+<h2 id="_templates">Templates</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section explains how to import your Gradle projects created with grooid-templates to
-Android Studio.</p>
+<p>These are the current available templates.</p>
 </div>
 <div class="sect2">
-<h3 id="_android_studio_0_8_x">Android Studio 0.8.x</h3>
+<h3 id="_app">App</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -447,31 +448,32 @@ Android Studio.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In order to work with Android Studio 0.8.x you should be using version 1.0 of the
-grooid templates
+latest <code>grooid-new-project</code> template version is: 1.1.7
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>(TODO)</p>
+<p>We’re now ready to create the project. You can list all available
+templates from the command line with:</p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<strong>grooid-templates</strong> development will be focused on Android Studio 1.x+ . So if you&#8217;re
-still using previous versions it&#8217;s recommended to migrate asap.
-</td>
-</tr>
-</table>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones list
+Available templates in marioggar/grooid-templates:
+
+marioggar/grooid-new-project
+marioggar/grooid-new-library</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_android_studio_1_x">Android Studio 1.x</h3>
+<div class="paragraph">
+<p>And then create a new project by executing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones create name-of-the-template [optional-template-version] name-of-the-project</code></pre>
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -479,39 +481,226 @@ still using previous versions it&#8217;s recommended to migrate asap.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In order to work with Android Studio 1.x you should use version 1.1+ of the grooid-templates
+If no version is used, then the latest is implied
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Once you&#8217;ve created your project now you can import it in Android Studio. Unfortunately Android Studio
-can&#8217;t recognize a Gradle project as an Android app directly so you have to import it as a "Non-Android-Project".</p>
+<p>Lets see an example:</p>
 </div>
-<div class="imageblock" style="text-align: center">
+<div class="listingblock">
 <div class="content">
-<img src="imgs/as_1.0/as_import_project.png" alt="as import project" width="500">
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones create grooid-new-project newandroidproject
+
+Creating project from template grooid-new-project 1.1.7 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
+
+What is newandroidproject
+--------------------------------------
+
+You've just created a basic Android-Groovy application. It provides a standard project structure and
+a basic Gradle plugin. Now is up to you to add your source files and edit them with Android Studio
+and have fun :)
+
+
+Project created in newandroidproject!</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Then you should select the directory with the Gradle project.</p>
+<p>Now you can import your project to Android Studio.</p>
+</div>
+<div class="sect3">
+<h4 id="_import_to_as">Import to AS</h4>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This section has been written using <code>Android Studio
+2.2.3</code>. It&#8217;s always recommended to use the latest available AS.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Open Android Studio and click <code>Import project (Eclipse ADT, Gradle, etc.)</code>:</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="imgs/as_1.0/as_import_project_select.png" alt="as import project select" width="500">
+<img src="imgs/as/import_initial.png" alt="import initial" width="500">
 </div>
 </div>
 <div class="paragraph">
-<p>Because the project has a embeded Gradle wrapper Android Studio will load that version in order to
-build the project.</p>
-</div>
-<div class="paragraph">
-<p>Once the project has been loaded your Android view should look like this:</p>
+<p>Then you should select the directory containing the Gradle project.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="imgs/as_1.0/as_import_project_end.png" alt="as import project end" width="500">
+<img src="imgs/as/import_select_directory.png" alt="import select directory" width="500">
 </div>
+</div>
+<div class="paragraph">
+<p>Because the project has an embeded Gradle wrapper, Android Studio will
+load that version in order to build the project. Once the project has
+been loaded your Android view should look like this:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/as/import_imported_project.png" alt="import imported project" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>The project also is configured to be executed in an emulator. If you
+have already configured an emulator with the right SDK version, you
+can click on the play button found on the top in the tools bar.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/as/import_play.png" alt="import play" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>Select the proper emulator image (It will depend on the configured
+SDK).</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/as/import_select_emulator.png" alt="import select emulator" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>And finally you will see the exaple application running.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="imgs/as/import_up_and_running.png" alt="import up and running" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>Now you have the base is all up to you. Happy coding :)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_libraries">Libraries</h4>
+<div class="paragraph">
+<p>The project you&#8217;ve just created has some useful dependencies in order not to
+start from scratch.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Swissknife</code> (<a href="https://github.com/Arasthel/SwissKnife" class="bare">https://github.com/Arasthel/SwissKnife</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A multi-purpose library containing view injection and threading handling for Android using Groovy AST transformations,
+extensions and DSLs</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Retrofit</code> (<a href="http://square.github.io/retrofit/" class="bare">http://square.github.io/retrofit/</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An easy REST client for Android and Java</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Picasso</code> (<a href="http://square.github.io/picasso/" class="bare">http://square.github.io/picasso/</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A powerful image downloading and caching library for Android</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Android-Spock</code> (<a href="https://github.com/pieces029/android-spock" class="bare">https://github.com/pieces029/android-spock</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Use Spock (<a href="https://github.com/spockframework" class="bare">https://github.com/spockframework</a>) tests in your Android app.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emerger_plugin">Emerger plugin</h4>
+<div class="paragraph">
+<p>An <code>Android/Groovy</code> project can make use of more Groovy libraries as
+well, that&#8217;s great, but the problem comes when using module
+extensions. One limitation of an Android application building process
+is that any app should beware of repeating file names within the same
+directory hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>Because module extensions are all build with a specific file put in a
+specific directory, that eventually will make Android build process to
+complain.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Emerger</code> plugin is aimed for merging all module extension
+descriptors into one to overcome the Android build process limitation.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+At the moment the <strong>Emerger</strong> plugin is in beta phase, so
+the more feedback the better at <a href="https://github.com/grooida/emerger" class="bare">https://github.com/grooida/emerger</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_library">Library</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+latest <code>grooid-new-library</code> template version is: 1.0.3
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you want to create an Android library then you should use the
+<code>create-new-library</code> template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones create grooid-new-library newandroidproject
+
+Creating project from template grooid-new-project 1.0.3 in 'newandroidproject'
+DEFAULT source code package ? [grooid.app]:
+MIN version of SDK you want to target ? [19]:
+MAX version of SDK you want to target ? [21]:
+DEFAULT version for Android Build Tools ? [22.0.1]:
+DEFAULT version for Android support v4 ? [21.0.0]:
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then follow the same instructions than in previous chaper to import
+your project to Android Studio.</p>
 </div>
 </div>
 </div>
@@ -519,8 +708,11 @@ build the project.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-09-05 18:40:32 +02:00
+Last updated 2017-01-23 21:59:45 UTC
 </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script>prettyPrint()</script>
 </body>
 </html>

@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.2">
-<title>Install Grooid Templates</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
+<meta name="generator" content="Asciidoctor 1.5.3">
+<title>Installation</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove the comments around the @import statement below when using this as a custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400";*/
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic|Noto+Serif:400,400italic,700,700italic|Droid+Sans+Mono:400";*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
@@ -77,7 +76,7 @@ a:hover,a:focus{color:#1d4b8f}
 a img{border:none}
 p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#016a36;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
 h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
 h1{font-size:2.125em}
 h2{font-size:1.6875em}
@@ -137,7 +136,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #header:after,#content:after,#footnotes:after,#footer:after{clear:both}
 #content{margin-top:1.25em}
 #content:before{content:none}
-#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child{color:#016833;margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
 #header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
 #header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
@@ -150,17 +149,17 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #header #revnumber{text-transform:capitalize}
 #header #revnumber:after{content:"\00a0"}
 #content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em; background-color:#3483a1;}
 #toc>ul{margin-left:.125em}
 #toc ul.sectlevel0>li>a{font-style:italic}
 #toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
 #toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
-#toc a{text-decoration:none}
+#toc a{text-decoration:none; color: white;}
 #toc a:active{text-decoration:underline}
-#toctitle{color:#7a2518;font-size:1.2em}
+#toctitle{font-size:1.2em;color: #a4c639;font-weight:400;}
 @media only screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2{margin-top:0!important;background-color:#3483a1;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
 #toc.toc2 ul ul{margin-left:0;padding-left:1em}
@@ -274,8 +273,8 @@ dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
 ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
 ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist li>p:first-child>.fa-check-square-o:first-child,ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{position:relative;top:1px}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -380,7 +379,7 @@ p{margin-bottom:1.25rem}
 *{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
 a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after,a[href^="mailto:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
 abbr[title]:after{content:" (" attr(title) ")"}
 pre,blockquote,tr,img{page-break-inside:avoid}
 thead{display:table-header-group}
@@ -407,48 +406,53 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
+
+.github img {position:absolute; top:0; right:0;}
+
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-<script>document.addEventListener('DOMContentLoaded', prettyPrint)</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_install_grooid_templates">Install Grooid Templates</a></li>
+<li><a href="#_installation">Installation</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_install_grooid_templates">Install Grooid Templates</h2>
+<h2 id="_installation">Installation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The first step is to get Lazybones installed on your system. The easiest way to achieve this goal is to install GVM first</p>
+<p>The first step is to get Lazybones installed on your system. The
+easiest way to achieve this goal is to install
+<a href="http://sdkman.io/">SDKMAN</a> first:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ curl -s get.gvmtool.net | bash</code></pre>
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ curl -s "https://get.sdkman.io" | bash
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Install the latest version of Lazybones with the following command</p>
+<p>Install the latest version of Lazybones with the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ gvm install lazybones</code></pre>
+<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ sdk install lazybones</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Next, add the Android Lazybones templates repository to your Lazybones configuration. Edit <strong>$USER_HOME/.lazybones/config.groovy</strong> and paste the following content</p>
+<p>Next, add the Android Lazybones templates repository to your Lazybones
+configuration. Edit <code>$USER_HOME/.lazybones/config.groovy</code> and paste
+the following content</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">bintrayRepositories = [
-    "marioggar/grooid-templates",
+    "grooida/grooid-templates",
     "pledbrook/lazybones-templates"
 ]</code></pre>
 </div>
@@ -458,8 +462,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-09-05 18:40:32 +02:00
+Last updated 2017-01-23 21:59:45 UTC
 </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script>prettyPrint()</script>
 </body>
 </html>

@@ -5,114 +5,30 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>Android Groovy Templates</title>
-<link rel="stylesheet" href="./css/style.css">
+<title>App</title>
+<style>
+
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Android Groovy Templates</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_license">1.1. License</a></li>
-<li><a href="#_github">1.2. Github</a></li>
-</ul>
-</li>
-<li><a href="#_installation">2. Installation</a></li>
-<li><a href="#_templates">3. Templates</a>
-<ul class="sectlevel2">
-<li><a href="#_app">3.1. App</a>
+<li><a href="#_app">App</a>
 <ul class="sectlevel3">
-<li><a href="#_import_to_as">3.1.1. Import to AS</a></li>
-<li><a href="#_libraries">3.1.2. Libraries</a></li>
-<li><a href="#_emerger_plugin">3.1.3. Emerger plugin</a></li>
-</ul>
-</li>
-<li><a href="#_library">3.2. Library</a></li>
+<li><a href="#_import_to_as">Import to AS</a></li>
+<li><a href="#_libraries">Libraries</a></li>
+<li><a href="#_emerger_plugin">Emerger plugin</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="imgs/grooid-templates.png" alt="grooid templates">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_introduction">1. Introduction</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This project tries to help Groovy/Android developers to speed up
-project creation and configuration by using predefined templates.</p>
-</div>
 <div class="sect2">
-<h3 id="_license">1.1. License</h3>
-<div class="paragraph">
-<p>Grooid templates are under <a href="http://www.apache.org/licenses/">Apache License 2.0</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_github">1.2. Github</h3>
-<div class="paragraph">
-<p>You can find source code at <a href="https://github.com/grooida/grooid-templates" class="bare">https://github.com/grooida/grooid-templates</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installation">2. Installation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The first step is to get Lazybones installed on your system. The
-easiest way to achieve this goal is to install
-<a href="http://sdkman.io/">SDKMAN</a> first:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ curl -s "https://get.sdkman.io" | bash
-$ source "$HOME/.sdkman/bin/sdkman-init.sh"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Install the latest version of Lazybones with the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ sdk install lazybones</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Next, add the Android Lazybones templates repository to your Lazybones
-configuration. Edit <code>$USER_HOME/.lazybones/config.groovy</code> and paste
-the following content</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-groovy" data-lang="groovy">bintrayRepositories = [
-    "grooida/grooid-templates",
-    "pledbrook/lazybones-templates"
-]</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_templates">3. Templates</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>These are the current available templates.</p>
-</div>
-<div class="sect2">
-<h3 id="_app">3.1. App</h3>
+<h3 id="_app">App</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -187,7 +103,7 @@ Project created in newandroidproject!</code></pre>
 <p>Now you can import your project to Android Studio.</p>
 </div>
 <div class="sect3">
-<h4 id="_import_to_as">3.1.1. Import to AS</h4>
+<h4 id="_import_to_as">Import to AS</h4>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -259,7 +175,7 @@ SDK).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_libraries">3.1.2. Libraries</h4>
+<h4 id="_libraries">Libraries</h4>
 <div class="paragraph">
 <p>The project you&#8217;ve just created has some useful dependencies in order not to
 start from scratch.</p>
@@ -307,7 +223,7 @@ extensions and DSLs</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emerger_plugin">3.1.3. Emerger plugin</h4>
+<h4 id="_emerger_plugin">Emerger plugin</h4>
 <div class="paragraph">
 <p>An <code>Android/Groovy</code> project can make use of more Groovy libraries as
 well, that&#8217;s great, but the problem comes when using module
@@ -336,44 +252,6 @@ the more feedback the better at <a href="https://github.com/grooida/emerger" cla
 </td>
 </tr>
 </table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_library">3.2. Library</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-latest <code>grooid-new-library</code> template version is: 1.0.3
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If you want to create an Android library then you should use the
-<code>create-new-library</code> template:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-shell" data-lang="shell">$ lazybones create grooid-new-library newandroidproject
-
-Creating project from template grooid-new-project 1.0.3 in 'newandroidproject'
-DEFAULT source code package ? [grooid.app]:
-MIN version of SDK you want to target ? [19]:
-MAX version of SDK you want to target ? [21]:
-DEFAULT version for Android Build Tools ? [22.0.1]:
-DEFAULT version for Android support v4 ? [21.0.0]:
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then follow the same instructions than in previous chaper to import
-your project to Android Studio.</p>
-</div>
 </div>
 </div>
 </div>
