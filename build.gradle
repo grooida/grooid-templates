@@ -41,12 +41,6 @@ asciidoctor {
                'pdf-style'           :  'default',
                'grooid-new-project'  :  versions.grooid_new_project,
                'grooid-new-library'  :  versions.grooid_new_library
-    resources {
-        from(sourceDir) {
-            include 'css/**'
-            include 'imgs/**'
-        }
-    }
 }
 
 githubPages {
@@ -63,3 +57,14 @@ githubPages {
         password = ''
     }
 }
+
+task copyResources(type: Copy) {
+  from ("docs") {
+    include 'css/**'
+    include 'imgs/**'
+  }
+
+  into("${buildDir}/asciidoc/html5")
+}
+
+asciidoctor.dependsOn copyResources
