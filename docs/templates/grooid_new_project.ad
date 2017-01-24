@@ -8,10 +8,10 @@ templates from the command line with:
 [source, shell]
 ----
 $ lazybones list
-Available templates in marioggar/grooid-templates:
+Available templates in grooida/grooid-templates:
 
-marioggar/grooid-new-project
-marioggar/grooid-new-library
+grooida/grooid-new-project
+grooida/grooid-new-library
 ----
 
 And then create a new project by executing:
